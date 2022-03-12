@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(37, 139, 255);
+}
+h1 {
+    position: absolute;
+    left: 35%;
+    text-align: center;
+    color: white;
+}
+img {
+    position: absolute;
+    width: 500px;
+    top: 99px;
+    right: 0px;
+    bottom: 0px;
+    left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    top: 57%;
+    left: 40%;
+    
+}
+input {
+    position: absolute;
+    width: 150px;
+    top: 62%;
+    left: 45%;
+}
+.time {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 620px;
+}
+.A {
+    position: absolute;
+    text-align: center;
+    top: 72%;
+    left: 620px;
+}
+.B {
+    position: absolute;
+    text-align: center;
+    top: 72%;
+    left: 690px;
+}

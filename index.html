@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同じ文字入れクイズ</title>
+</head> 
+<body>
+    <h1>同じ文字を入れて言葉を作れ</h1>
+    <h5>※正解、不正解音が鳴ります。</h5>
+    <img src="0.png" id="q">
+    <div id="problem"></div>
+    <input type="text" id="answer" placeholder="答えを入力してください">
+    <p class="time">START</p>
+    <p class="A">正解数</p><p class="B"></p>
+</body>
+<script>
+    let Question = document.getElementById("q");
+    let qs = ["1.png", "2.png", "3.png", "4.png", "5.png",
+                        "6.png", "7.png", "8.png", "9.png", "10.png",
+                        "11.png", "12.png", "13.png", "14.png", "15.png", 
+                        "16.png", "17.png", "18.png", "19.png"];
+    let quizNo = Math.floor(Math.random() * qs.length);
+    Question.src = qs[quizNo];
+    console.log(quizNo);
+
+    let str;
+    let re;
+    let timer;
+    let count = 20;
+    let seikai = 0;
+    alert("すべてひらがな1文字で解答してください。" + "制限時間は" + count + "秒です。");
+    alert("GAMESTART");
+    startTimer();
+
+    function startTimer () {
+        timer = setInterval(showSecond, 1000);   
+    }
+    let seA = new Audio('maru.mp3');
+    let seB = new Audio('batsu.mp3');
+    let A = document.getElementsByClassName("B");
+    let answer = document.getElementById("answer");
+
+    document.addEventListener('keydown', (event) => {
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 0) {
+            if (answer.value === "と") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 1) {
+            if (answer.value === "な") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 2) {
+            if (answer.value === "し") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 3) {
+            if (answer.value === "お") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 4) {
+            if (answer.value === "ら") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 5) {
+            if (answer.value === "す") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 6) {
+            if (answer.value === "く") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 7) {
+            if (answer.value === "と") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 8) {
+            if (answer.value === "い") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 9) {
+            if (answer.value === "ん") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 10) {
+            if (answer.value === "か") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 11) {
+            if (answer.value === "り") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 12) {
+            if (answer.value === "く") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 13) {
+            if (answer.value === "と") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 14) {
+            if (answer.value === "ん") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 15) {
+            if (answer.value === "し") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 16) {
+            if (answer.value === "か") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 17) {
+            if (answer.value === "す") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+        if (event.keyCode === 13 && answer.value !== '' && quizNo === 18) {
+            if (answer.value === "か") {
+                answer.value = '';
+                seA.play();
+                seikai++;
+                console.log(seikai);
+                A[0].innerHTML =　seikai;
+                quizNo = Math.floor(Math.random() * qs.length);
+                Question.src = qs[quizNo];
+            }else {
+                answer.value = '';
+                seB.play();
+            }
+        }
+    })
+    function showSecond () {
+        count--; 
+        str = "残り" + count + "秒";
+        re = document.getElementsByClassName('time');
+        re[0].innerHTML = str;
+        if (count === -1) {
+            alert("ゲーム終了" + "正解数" + seikai);
+            document.location.reload();  
+        }
+    }
+
+    
+</script>
+</html>
